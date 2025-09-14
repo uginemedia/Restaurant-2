@@ -103,7 +103,7 @@ body {
 }
 
 .nav-links {
-  display: none; /* Hidden by default, shown on desktop */
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -120,7 +120,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #fcd34d; /* Amber 300 */
+  color: #fcd34d; 
 }
 
 .nav-button-desktop {
@@ -393,25 +393,18 @@ body {
 }
 
 /* 6. Chefs Section */
-.chefs-section {
-  padding: 60px 20px;
-  text-align: center;
-  background: var(--color-bg);
+@media (min-width: 768px) {
+  .chefs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.section-title {
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: var(--color-heading);
+@media (min-width: 1024px) {
+  .chefs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.chefs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
 
 .chef-card {
   background: #fafafa;
